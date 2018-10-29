@@ -1,0 +1,213 @@
+#skills{
+  padding: 80px 0;
+    .large-title{
+      font-size: 4.5rem;
+      color: $blueHeading;
+      letter-spacing: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+      left: -200px;
+    }
+  .skills-container{
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+  }
+  .icons{
+    .large-square{
+      border: 15px solid $darkBlueSquare;
+      height: 180px;
+      width: 180px;
+      padding: 5px;
+      display: inline-block;
+      position: relative;
+      top: -60px;
+      .square{
+        background: $darkBlueSquare;
+        height: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+    }
+    .large-circle{
+      border: 15px solid $yellowCircle;
+      color: $yellowCircle;
+      height: 180px;
+      width: 180px;
+      padding: 5px;
+      display: inline-block;
+      position: relative;
+      top: 200px;
+      left: 70px;
+      border-radius: 50%;
+      .circle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        height: 100%;
+      }
+    }
+    .large-triangle{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 150px 220px 130px;
+      border-color: transparent transparent $hoverBackgroundColor transparent;
+      display: inline-block;
+      position: relative;
+      top: 250px;
+      left: 0px;
+      .triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 113.75px 165.75px 93.75px;
+        border-color: transparent transparent white transparent;
+        position: absolute;
+        left: -94px;
+        top: 35px;
+        color: $hoverBackgroundColor;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        .text{
+          position: absolute;
+          top: 108px;
+          left: -57px;
+        }
+      }
+    }
+  }
+  .skills{
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 0;
+    .skill-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      // grid-template-rows: 200px 200px;
+      grid-row-gap: 20px;
+      .skill-category{
+        margin:  0 auto;
+        color: $blackText;
+        .skill-type{
+          font-weight: 500;
+          padding: 10px 0;
+          text-align: center;
+        }
+        .skill-list{
+          font-weight: 300;
+          text-align: center;
+          line-height: 1.4;
+        }
+      }
+    }
+    .box{
+      padding: 20px 0;
+      margin-left: 75px;
+      color: $blackText;
+      .sub-heading{
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        padding: 5px 0 0 0;
+      }
+      .entity{
+        letter-spacing: 2px;
+        padding: 5px 0;
+      }
+      .date{
+        color: $darkBlueSquare;
+        font-weight: 300;
+        padding-bottom: 0.8rem;
+      }
+      .program{
+        font-weight: 300;
+      }
+    }
+    .resume{
+      text-align: center;
+      .btn{
+        transition: all 0.3s ease-in-out;
+        &:hover{
+          background-color: $hoverBackgroundColor;
+        }
+      }
+    }
+  }
+}
+
+/*Tablets*/
+@media only screen and (max-width:960px){
+  #skills{
+    .container{
+      padding: 5px;
+      .large-title{
+        left: -55px;
+      }
+      .skills-container{
+        .icons{
+          position: relative;
+          top: 90px;
+          .large-square{
+            top: -66px;
+            left: 35px;
+          }
+          .large-circle{
+            left: 40px;
+            top: 50px;
+          }
+          .large-triangle{
+            top: 150px;
+          }
+        }
+        .skills{
+          .skill-grid{
+            grid-template-columns: 1fr 1fr;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Phones*/
+@media only screen and (max-width:767px){
+  #skills{
+    .container{
+      padding: 5px;
+      .large-title{
+        left: 0px;
+        font-size: 3.5rem;
+      }
+      .skills-container{
+        grid-template-columns: 1fr;
+        .icons{
+          display: none;
+        }
+        .skills{
+          .skill-grid{
+            grid-template-columns: 1fr 1fr;
+            font-size: 1.1rem;
+          }
+          .box{
+            margin-left: 55px;
+          }
+        }
+      }
+    }
+  }
+}

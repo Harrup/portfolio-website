@@ -1,0 +1,80 @@
+#portfolio-project{
+  padding: 50px 0;
+  .container{
+    h1{
+      font-size: 3rem;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .project-image{
+      margin-bottom: 3rem;
+      .img{
+        background-position: top center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        //background-attachment: fixed !important;
+        width: 100%;
+        height: 450px;
+      }
+    }
+    .info{
+      .btn{
+        transition: all 0.3s ease-in-out;
+        &:hover{
+          background-color: $hoverBackgroundColor;
+        }
+      }
+    }
+    p{
+      font-size: 1.2rem;
+      color: $greyText;
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 1.8rem;
+      padding-top: 20px;
+    }
+    .technologies{
+      h3{
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+      .logos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        img{
+          width: 100%;
+          max-width: 80px;
+        }
+      }
+    }
+  }
+}
+
+/*Tablets*/
+@media only screen and (max-width:960px){
+  #portfolio-project{
+    .container{
+      width: 100%;
+      padding: 5px;
+    }
+  }
+}
+
+/*Phones*/
+@media only screen and (max-width:767px){
+  #portfolio-project{
+    .container{
+      p{
+        font-size: 1rem;
+      }
+      h1{
+        font-size: 2rem;
+      }
+    }
+  }
+}

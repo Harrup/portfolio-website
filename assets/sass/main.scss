@@ -1,0 +1,131 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import "variables";
+@import "top-page";
+@import "portfolio";
+@import "skills";
+@import "blogs";
+@import "footer";
+@import "Project";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  // background: purple;
+}
+.container{
+  max-width: 1250px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.btn{
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-align: center;
+  width: 230px;
+  height: auto;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: #a1beed;
+  margin: 5px auto;
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+nav{
+  padding: 20px 5px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    .logo{
+      font-weight: 700;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .name{
+        color: white;
+        background: $blackText;
+        padding: 10px 15px;
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+        text-decoration: none;
+      }
+    }
+    .menu-items{
+      text-transform: uppercase;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      a{
+        text-decoration: none;
+        padding: 0 10px;
+        color: $blackText;
+        &:hover{
+          font-weight: 700;
+          color: $hoverBackgroundColor;
+        }
+      }
+    }
+    .bars{
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      font-weight: 700;
+      color: $hoverBackgroundColor;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+  }
+}
+.mobile-menu{
+  display: none;
+  background: white;
+  position: absolute;
+  right: 0;
+  transform: translate3d(100%, 0,0);
+  transition: all 0.4s ease-in-out;
+  -webkit-box-shadow: 0px 2px 10px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 10px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 10px -1px rgba(0,0,0,0.75);
+  // top: 65px;
+  a{
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    color: $blackText;
+    &:hover{
+      font-weight: 700;
+      color: $hoverBackgroundColor;
+    }
+  }
+  &.active{
+    transform: translate3d(0 , -20px, 0);
+  }
+}
+
+/*Tablets*/
+@media only screen and (max-width:960px){
+
+}
+
+/*Phones*/
+@media only screen and (max-width:767px){
+  nav{
+    .container{
+      .menu-items{
+        display: none;
+      }
+      .bars{
+        display: flex;
+      }
+    }
+  }
+  .mobile-menu{
+    display: block;
+  }
+}
