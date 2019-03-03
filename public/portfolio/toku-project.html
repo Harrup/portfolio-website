@@ -36,8 +36,13 @@
           <div class="img3" style="background-image:url('../img/toku/Toku4.png')"></div>
         </div>
         <h1>Toku Project</h1>
-        <p>Toku is social media application.The front end is built using reactJS and CSS is preprocessed using sass.
-          The backend is built using a nodeJS framework (AdonisJS). User authentication and flash messages are used on this application and are achieved using AdonisJS.
+        <p>Toku is dynamic web application where users can login and share posts with other toku users. It utilizes a combination of client side and server side technologies to authenticate a user, retrieve old posts and save new posts.
+          The client side is built using the react javascript framework with a combination of HTML5 and CSS3, preprocessed using sass.
+          The backend is built using Node.js, AdonisJs server side framework and MySQL relational database.
+        </p>
+        <p>
+          AdonisJs makes user authentication and validation clear using a controller that contains login, logout and register methods. These methods are triggered when a post request is made from the login and register forms.
+          When a user has successfully logged in, React obtains and displays the users recent posts by setting off a method that fetches the users posts from the database.
         </p>
         <div class="info">
           <a href="https://toku-social-media.herokuapp.com" target="_blank" class="btn"><i class="fas fa-tv"></i>View Project</a>
