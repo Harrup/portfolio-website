@@ -78,6 +78,7 @@
       .logos{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 250px 250px;
         align-items: center;
         justify-items: center;
         grid-gap: 20px;
@@ -101,8 +102,16 @@
     .container{
       width: 100%;
       padding: 5px;
+      .technologies{
+        .logos{
+          grid-template-rows: 250px 250px;
+        }
+      }
+      .project-image{
+        grid-template-rows: 245px 245px;
     }
   }
+}
 }
 
 /*Phones*/
@@ -117,7 +126,7 @@
       }
       .project-image{
         grid-template-columns: 1fr;
-        grid-template-rows: 300px 300px 300px;
+        grid-template-rows: 260px 260px 260px;
         .img1{
           grid-column: 1/2;
           grid-row: 1/2;
@@ -129,6 +138,12 @@
         .img3{
           grid-column: 1/2;
           grid-row: 3/4;
+        }
+      }
+      .technologies{
+        .logos{
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 250px 250px 250px;
         }
       }
     }
